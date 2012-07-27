@@ -1,0 +1,9 @@
+boot: cdrom
+ata0-master: type=disk, path=tinycore-tce.img, status=inserted
+ata0-slave: type=cdrom, path=TinyCore-current.iso, status=inserted
+cpu: count=1, ips=50000000
+clock: sync=realtime
+cpuid: avx=2, xsave=1, mmx=1, sep=1, sse=sse4_2, sse4a=1, aes=1, xsaveopt=1, avx_f16c=1, avx_fma=1, bmi=2, fma4=1, xop=1, tbm=1, x86_64=1, 1g_pages=1, pcid=1, smep=1, mwait=1, movbe=1, apic=xapic
+megs: 384
+ne2k: ioaddr=0x300, irq=3, mac=fe:fd:00:00:00:01, ethmod=tuntap, ethdev=/dev/net/tun, script=/home/janus/tce/tunconfig
+display_library: x
