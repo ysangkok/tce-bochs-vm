@@ -28,7 +28,7 @@
     tc@box:~$
 
 ## Instructions
-1. Download all files in downloads and unpack.
+1. Download all files in the Git repository and the downloads. Unpack archives from downloads.
 1. Adjust paths in ``bochsrc``.
 1. Launch bochs as root. Example ``sudo ~/bochs-2.5.1-build/bin/bochs`` (root for tuntap)
 1. Select "restore state". Point Bochs to the snapshot folder.
@@ -38,3 +38,5 @@
 ## Tips
 - If the Bochs terminal input doesn't work, press the ALT key.
 - Don't change keyboard layout while Bochs is running
+- GDB is not installed in the given snapshot! Use ``tce-load -wi gdb.tcz`` to install it. Needs internet access, obviously.
+- If you reboot from the TinyCore ISO, the NE2000 driver needs manual modprobing. Use ``sudo modprobe ne io=0x300 irq=3``. Obviously you need to change the IRQ and I/O addr if you change them in ``bochsrc``.
